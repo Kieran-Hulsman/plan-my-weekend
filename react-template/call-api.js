@@ -1,10 +1,13 @@
 const openAI = require("openai");
-
 const sdk = require('api')('@metaphorapi/v1.0#22sl31gln0t5di1');
-sdk.auth('0ff8e847-cf84-4932-ac1b-df666918053b'); // api key
+
+const METAPHOR_KEY = process.env.METAPHOR_KEY;
+const OPENAI_KEY = process.env.OPENAI_KEY;
+
+sdk.auth(METAPHOR_KEY); // api key
 
 const openai = new openAI({
-    apiKey: "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",
+    apiKey: OPENAI_KEY,
 });
 
 async function callAPI(city) {

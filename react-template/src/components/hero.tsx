@@ -1,16 +1,10 @@
+// where the api is called from and itinerary state var is updated
 import type { ReactNode } from 'react'
 import { useEffect, useRef, useState } from 'react'
 import ScrollReveal from 'scrollreveal'
 
 import { NewsletterForm } from './newsletter-form'
 import { DisplayBox } from './display-box'
-
-// import { callAPI } from '../../call-api.js';
-
-// import * as OpenAI from "openai";
-// import * as api from 'api';
-
-
 
 type ScrollRevealRefElement =
   | HTMLHeadingElement
@@ -55,11 +49,6 @@ export function Hero({
             console.log(result.result);
             setItinerary(result.result);
         })
-
-        // make call to gpt from here
-        // const result = await callAPI(city);
-        // const result = "hello.";
-        // setItinerary(result);
   }
 
   return (
@@ -104,12 +93,6 @@ export function Hero({
           <div className="relative -ml-6 -mr-6 py-10 lg:p-0">
             <DisplayBox itinerary={itinerary} />
             </div>
-{/*         
-          {!!illustration && (
-            <div className="relative -ml-6 -mr-6 py-10 lg:p-0">
-              {illustration}
-            </div>
-          )} */}
         </div>
       </div>
     </section>

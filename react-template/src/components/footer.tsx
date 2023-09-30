@@ -1,6 +1,3 @@
-import { NavLinks } from './nav-links'
-import { SocialLinks } from './social-links'
-
 export function Footer() {
   return (
     <footer className="bg-primary-400 text-sm leading-5 tracking-normal text-white lg:bg-transparent lg:text-gray-400">
