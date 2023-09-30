@@ -20,10 +20,13 @@
     "validate": "run-p lint typecheck"
   },
   "dependencies": {
+    "api": "^6.1.1",
     "clsx": "^1.2.1",
     "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "gh-pages": "^5.0.0",
+    "openai": "^4.11.0",
     "postcss-import": "^15.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

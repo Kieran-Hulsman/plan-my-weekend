@@ -6,6 +6,8 @@ import ScrollReveal from 'scrollreveal'
 import { NewsletterForm } from './newsletter-form'
 import { DisplayBox } from './display-box'
 
+const BACKEND_SERVER = "https://plan-my-weekend.onrender.com";
+
 type ScrollRevealRefElement =
   | HTMLHeadingElement
   | HTMLParagraphElement
@@ -42,8 +44,8 @@ export function Hero({
 
     async function onCitySubmit(city: string) {
         setItinerary("loading...");
-
-        fetch(`http://localhost:3000/api/call?city=${city}`)
+        
+        fetch(`${BACKEND_SERVER}/api/call?city=${city}`)
         .then((response) => response.json())
         .then((result) => {
             console.log(result.result);

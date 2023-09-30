@@ -1,14 +1,14 @@
-const openAI = require("openai");
+const openAI = require('openai');
+require('dotenv').config();
 const sdk = require('api')('@metaphorapi/v1.0#22sl31gln0t5di1');
 
-const METAPHOR_KEY = process.env.METAPHOR_KEY;
-const OPENAI_KEY = process.env.OPENAI_KEY;
+const metaphorKey = process.env.METAPHOR_KEY;
+const openaiKey = process.env.OPENAI_KEY;
 
-sdk.auth(METAPHOR_KEY); // api key
+console.log(openaiKey);
+sdk.auth(metaphorKey); // api key
 
-const openai = new openAI({
-    apiKey: OPENAI_KEY,
-});
+const openai = new openAI({ apiKey: openaiKey });
 
 async function callAPI(city) {
   try {
