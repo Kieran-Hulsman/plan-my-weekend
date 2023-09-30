@@ -43,7 +43,7 @@ export function Hero({
     const [itinerary, setItinerary] = useState("");
 
     async function onCitySubmit(city: string) {
-        setItinerary("loading...");
+        setItinerary("loading... (give it a sec, sometimes it takes a while)");
         
         fetch(`${BACKEND_SERVER}/api/call?city=${city}`)
         .then((response) => response.json())
