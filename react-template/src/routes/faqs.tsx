@@ -45,7 +45,7 @@ export default function FaqsPage() {
             <p>
               Yes, you can! Holly is an open source project, and you can
               contribute to it on{' '}
-              <a href="https://github.com/lukemcdonald/holly-react">GitHub</a>.
+              <a href="https://github.com/lukemcdonald/not-holly-react">GitHub</a>.
             </p>
           </details>
         </ArticleContent>
